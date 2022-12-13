@@ -512,13 +512,13 @@
 
 		
 		<!-- System Dependencies -->
-		<!-- <dependency>
+		<dependency>
 			<artifactId>IGRP</artifactId>
 			<groupId>nosi</groupId>
 			<version>1.0</version>
 			<scope>system</scope>
     		<systemPath>${pom.basedir}/src/main/webapp/WEB-INF/lib/IGRP.jar</systemPath>
-		</dependency> -->
+		</dependency>
 		
 		
 			
