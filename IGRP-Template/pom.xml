@@ -6,7 +6,7 @@
 	
 	<groupId>IGRP-Template</groupId>
 	<artifactId>IGRP-Template</artifactId>
-	<version>v.220127</version>
+	<version>1.5.0.221212</version>
 	<packaging>war</packaging>
 	
 	<properties>
@@ -102,10 +102,12 @@
 		
 		<!-- Flyway Migration API & Docker PostgreSQL -->
 		<flyway.version>8.5.8</flyway.version>
-		<igrp.db.user>postgres</igrp.db.user>
-		<igrp.db.password>softwaredeveloper</igrp.db.password>
-		<igrp.db.dsn>jdbc:postgresql://localhost:5432/db_igrp</igrp.db.dsn> <!-- Comment this line when run IGRPWEB+Postgres+Docker -->
-		<!--<igrp.db.dsn>jdbc:postgresql://postgres:5432/db_igrp</igrp.db.dsn>--> <!-- Uncomment this line when run IGRPWEB+Postgres+Docker -->
+		<igrp.db.user>[DB_USER]/igrp.db.user>
+		<igrp.db.password>[DB_PASSWORD]</igrp.db.password>
+		<!-- Comment this line when run IGRPWEB+Postgres+Docker -->
+		<igrp.db.dsn>jdbc:postgresql://[DB_HOST]:[DB_PORT]/[DB_IGRP_NAME]</igrp.db.dsn> </property><!-- Eg: jdbc:postgresql://localhost:5432/db_igrp  -->
+		<!-- Uncomment this line when run IGRPWEB+Postgres+Docker -->
+		<!--<igrp.db.dsn>jdbc:postgresql://postgres:5432/db_igrp</igrp.db.dsn>--> 
 		<igrp.migration.location>classpath:nosi/core/db/migration/igrp/postgres</igrp.migration.location>
 		
 		<!-- K8s & Docker -->

@@ -10,7 +10,8 @@
         signerbeforsave = false,
         objclicked      = null,
         successProcesso = false,
-        defaultError    = 'Ocorreu um erro inesperado! Por favor recarregue o seu ecrã e tenta novamente.';
+        defaultError    = 'Ocorreu um erro inesperado! Por favor recarregue o seu ecrã e tenta novamente.',
+        defaultSuccess  = 'Opera&ccedil;&atilde;o finalizada com sucesso.';;
 
     const baseUrl = 'https://nosica-signer.gov.cv:4444/api/Signer';
 
@@ -84,7 +85,7 @@
             filesigner : function(){
                 return `<div class="row mb-5" id="holder-fields-nosicasigner">
                     <div class="form-group col-sm-3" id="nosicasigner_file" item-name="nosicasigner_file" item-type="file">
-                        <label for="p_nosicasigner_file">Document</label>
+                        <label for="p_nosicasigner_file">Documento</label>
                         <div class="input-group">
                             <input type="text" class="form-control not-form" readonly="readonly"/>
                             <span class="input-group-btn">
@@ -117,7 +118,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="igrp-iframe  gen-container-item hidden" gen-class="" item-name="nosicasigner_iframe">  
+                <div class="igrp-iframe nosicasigner_iframe gen-container-item hidden" gen-class="" item-name="nosicasigner_iframe">  
                     <div class="box-body">
                       <iframe id="id-nosicasigner_iframe" style="min-height:650px" src=""/>
                     </div>
@@ -180,8 +181,9 @@
             holderSelect.addClass('hidden');
             $('.btn_nosica').addClass('hidden');
 
-            $('#nosicasigner_base64').remove();
             $('#nosicasigner_file').removeClass('hidden');
+
+            $('#nosicasigner_base64').remove();
 
             pinToken = null;
             idToken  = null;
@@ -486,12 +488,15 @@
 
                     try{
                         const xml = resp.responseXML || $($.parseXML(resp.response));
-                        
-                        $.IGRP.utils.afterSubmitAjax({
-                            xml 	: xml,
-                            clicked : p.clicked,
-                            sform   : $.IGRP.utils.getForm()
-                        });
+
+                        if(p.transform){
+
+                            $.IGRP.utils.afterSubmitAjax({
+                                xml 	: xml,
+                                clicked : p.clicked,
+                                sform   : $.IGRP.utils.getForm()
+                            });
+                        }
 
                         if(typeof p?.complete === 'function'){
                             p.complete(xml);
@@ -531,6 +536,7 @@
 
                     com.subimtData({
                         getFiles    : false,
+                        transform   : false,
                         url         : url,
                         clicked     : $(this),
                         result      : p.result,
@@ -540,27 +546,33 @@
                         complete : function(xml){
                             
                             if(objModal.is('[input-rel]')){
+
                                 let objholder   =  $('body');
 
-                                if(objModal.is('[idTabel]')){
-                                    const parentTable = $(`table#${objModal.attr('idTabel')}`);
+                                if(objModal.is('[idtabel]')){
+                                    const parentTable = $(`table#${objModal.attr('idtabel')}`);
 
                                     if(parentTable[0]){
 
-                                        const trIdx = objModal.attr('trIdx') * 1;
+                                        const trIdx = objModal.attr('tridx') * 1;
 
                                         objholder = $(`tbody tr:eq(${trIdx})`, parentTable);
                                     }
                                 }
-
+                            
                                 let objInput    = $(`#${objModal.attr('input-rel')}`,objholder),
                                     objUuid     = $(xml).find('signedUuid');
 
                                 if(objInput[0] && objUuid[0]){
+                                    
+                                    const val = objUuid.text();
 
-                                    objInput.val(objUuid.text());
+                                    objInput.val(val).attr('value',val);
 
-                                    objModal.modal('hide');
+                                    $.IGRP.notify({
+                                        message: defaultSuccess,
+                                        type   : 'success'
+                                    });
 
                                 }else{
 
@@ -569,6 +581,8 @@
                                         type   : 'danger'
                                     });
                                 }
+                                
+                                objModal.modal('hide');
                             }
                         }
                     });
@@ -614,6 +628,7 @@
 
                         com.subimtData({
                             getFiles : true,
+                            transform: true,
                             url      : objclicked.url,
                             clicked  : _clicked.clicked,
                             result   : p.result,
@@ -776,17 +791,18 @@
 
             if(p.url){
 
-                const iframeSigner = $('.nosicasigner_iframe');
-
-                iframeSigner.removeClass('hidden');
-
-                $('iframe',iframeSigner).attr('src',p.url);
-
                 com.fetchFileToBlod({
                     url      : p.url,
                     clicked  : p.clicked,
                     complete : function(){
+                        const iframeSigner = $('.nosicasigner_iframe');
+
+                        iframeSigner.removeClass('hidden');
+
+                        $('iframe',iframeSigner).attr('src',p.url);
+
                         com.controllModalAsigner(p.clicked);
+
                         com.getAvailableTokens();
                     }
                 });
@@ -796,15 +812,13 @@
 
         controllModalAsigner : function(obj){
 
-            $('.modal-body',objModal).html(com.html.filesigner());
-
             const trParent = obj.parents('tr:first');
 
             objModal.attr('input-rel',obj.attr('rel'));
 
             if(trParent[0]){
                 const idTabel = trParent.parents('table').attr('id');
-                objModal.attr('trIdx',(trParent[0].rowIndex -1)).attr('idTable',idTabel);
+                objModal.attr('tridx',(trParent[0].rowIndex -1)).attr('idtable',idTabel);
             }
 
             objModal.modal('show');
@@ -812,10 +826,12 @@
 
         events : function() {
 
-            $('body').on('click','.btn-filesigner', function(e){
+            $(document).on('click','.btn-filesigner', function(e){
                 e.preventDefault();
 
                 com.resetNosicasigner();
+
+                $('.modal-body',objModal).html(com.html.filesigner());
 
                 signerbeforsave = $(this).hasClass('signerbeforsave');
 
