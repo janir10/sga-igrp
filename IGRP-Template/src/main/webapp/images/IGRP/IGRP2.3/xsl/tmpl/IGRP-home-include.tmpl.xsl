@@ -23,15 +23,14 @@
     </xsl:if> 
     
     <script>
-   		var path        = '<xsl:value-of select="$path"/>';
-   		var ispublic    = '<xsl:value-of select="$ispublic"/>';
-      var rekey       = '<xsl:value-of select="$recaptchakey"/>'; 
-      var secretrekey = '<xsl:value-of select="$secretrecaptchakey"/>'; 
+   		  var path        = '<xsl:value-of select="$path"/>';
+   		  var ispublic    = '<xsl:value-of select="$ispublic"/>';
+      	var rekey       = '<xsl:value-of select="$recaptchakey"/>'; 
+      	var secretrekey = '<xsl:value-of select="$secretrecaptchakey"/>'; 
     </script>
 
     <!-- reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js?render={$recaptchakey}"></script>
-    
     <!-- BS CSS -->    
    
    <!-- NOT ASYNC JS-->   
@@ -308,6 +307,24 @@
       </div>
     </div>
     <!--/GLOBAL MODAL -->
+
+
+    <!-- GLOBAL MODAL ASIGNER -->
+    <div id="igrp-global-modal-asigner" class="modal fade bd-example-modal-lg" data-backdrop="static" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="title"></span>
+            <button type="button" class="close">×</button>
+          </div>
+          <div class="modal-body">
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/GLOBAL MODAL ASIGNER-->
+
     
     <!-- RIGHT PANEL MODAL -->
     <div class="modal fade right" id="igrp-right-panel">
