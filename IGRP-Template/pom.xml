@@ -86,6 +86,12 @@
 		<cxf.rt.frontend.jaxrs.version>3.3.6</cxf.rt.frontend.jaxrs.version>
 		<tomee.jaxrs.version>8.0.14</tomee.jaxrs.version>
 		
+		<!-- TomEE Embedded Maven Plugin -->
+		<tomee.maven.plugin.version>8.0.14</tomee.maven.plugin.version>
+		
+		<!-- TomEE Embedded -->
+		<tomee.embedded.version>8.0.14</tomee.embedded.version>
+		
 		<!-- JavaDev Underscore Version: Transform JSON To XML Preserving the order of the elements -->
 		<javadev.underscore.version>1.76</javadev.underscore.version>
 
@@ -93,12 +99,6 @@
 		<activiti.bpmn.model.version>6.0.0</activiti.bpmn.model.version>
 		<activiti.bpmn.converter.version>6.0.0</activiti.bpmn.converter.version>
 
-		<!-- TomEE Embedded Maven Plugin -->
-		<tomee.maven.plugin.version>8.0.14</tomee.maven.plugin.version>
-		
-		<!-- TomEE Embedded -->
-		<tomee.embedded.version>8.0.14</tomee.embedded.version>
-		
 		<!-- Flyway Migration API & Docker PostgreSQL -->
 		<flyway.version>9.14.1</flyway.version>
 		<igrp.db.user>[DB_USER]</igrp.db.user>  <!-- Eg: postgres -->
