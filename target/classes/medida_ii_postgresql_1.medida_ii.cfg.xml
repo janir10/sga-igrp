@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		 <property name="hibernate.connection.url">jdbc:postgresql://192.168.20.121:5432/db_fpef</property>
+		<!--<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/db_fpef</property>-->
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">postgres</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.connection.isolation">2</property>
+		<property name="hibernate.connection.autocommit">false</property>
+		<property name="hibernate.connection.pool_size">5</property>
+		<property name="hibernate.hbm2ddl.jdbc_metadata_extraction_strategy">individually</property>
+		<property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
+		<property name="hibernate.transaction.auto_close_session">DELAYED_ACQUISITION_AND_RELEASE_AFTER_TRANSACTION</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<!-- Hikaricp configuration -->
+		<property name="hibernate.connection.provider_class">org.hibernate.hikaricp.internal.HikariCPConnectionProvider</property>
+		<property name="hibernate.hikari.connectionTimeout">60000</property>
+		<property name="hibernate.hikari.idleTimeout">10000</property>
+		<property name="hibernate.hikari.minimumIdle">0</property>
+		<property name="hibernate.hikari.maximumPoolSize">10</property>
+		<property name="hibernate.hikari.maxLifetime">30000</property>
+		<property name="hibernate.hikari.leakDetectionThreshold">0</property>
+		<property name="hibernate.hikari.connectionTimeout">120000</property>
+		<property name="hibernate.hikari.idleTimeout">600000</property>
+		<property name="hibernate.hikari.maxLifetime">1800000</property>
+		<property name="hibernate.hikari.connectionTimeout">120000</property>
+		<property name="hibernate.hikari.idleTimeout">600000</property>
+		<property name="hibernate.hikari.maxLifetime">1800000</property>
+
+
+		<!-- Mapping your class here... 
+		Ex: <mapping class="nosi.webapps.medida_ii.dao.Employee"/> 		-->
+		
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.TPedido"/>
+        <mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTContaAcesso"/>
+        <mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTEntidade"/>
+        <mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTJobLog"/>
+        <mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTLogAlteracao"/>
+        <mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTDocumento"/>
+        <mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTPessoa"/>
+        <mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTEntidade"/>
+        <mapping class="nosi.webapps.medida_ii.dao.fpef.TNotificacao"/>
+        <mapping class="nosi.webapps.medida_ii.dao.fpef.Geografia"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTRubrica"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTConcurso"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTConcCriterio"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTConcRubrica"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTConcTranche"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTConcDoc"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTConcBolsa"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpetTConcTrancheTpDoc"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTCriterio"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTCritClass"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.VFepfDominioIgrp"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTClassificacao"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefVRubrica"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefVCriterio"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTParamPortal"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefVConcRubrica"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTCandidatura"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTCandFormacao"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTCandParceria"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTCandDesembolso"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTCandAtividade"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTParamReport"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTEmail"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTConcTrancheTemporario"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTConcDocTemporario"/>
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefVConcCriterio"/> 
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefVDesembolso"/> 
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTConfigEmail"/> 
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.User"/> 
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefVCandidatura"/> 
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefVAtividade"/> 
+		<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTAvaliacao"/>
+    	<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefTAvaliacaoDet"/> 
+    	<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefVConcurso"/> 
+    	<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefVDespesa"/>
+    	<mapping class="nosi.webapps.medida_ii.dao.fpef.FpefVInteracoe"/>
+    	 
+	</session-factory>
+</hibernate-configuration>

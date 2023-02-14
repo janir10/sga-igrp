@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+	<comment>All basic and advanced IGRP configuration parameters</comment>
+
+	<!-- -->
+	<entry key="igrp.env">dev</entry>
+	
+	<!-- -->
+	<entry key="ids.wso2.enabled">false</entry>
+	<entry key="ids.wso2.RemoteUserStoreManagerService-wsdl-url"></entry>
+	<entry key="ids.wso2.admin-usn"></entry>
+	<entry key="ids.wso2.admin-pwd"></entry>
+
+	<!-- -->
+	<entry key="ids.wso2.oauth2-openid.enabled">false</entry>
+	<entry key="ids.wso2.oauth2.client_id"></entry>
+	<entry key="ids.wso2.oauth2.client_secret"></entry>
+	<entry key="ids.wso2.oauth2.endpoint.token"></entry>
+	<entry key="ids.wso2.oauth2.endpoint.user"></entry>
+	<entry key="ids.wso2.oauth2.endpoint.authorize"></entry>
+	<entry key="ids.wso2.oauth2.endpoint.redirect_uri"></entry>
+	<entry key="ids.wso2.oauth2.endpoint.logout"></entry>
+	
+	<!-- -->
+	<entry key="igrp.env.dev.url"></entry>
+	<entry key="igrp.env.prod.url"></entry>
+	<entry key="igrp.env.stage.url"></entry>
+
+	<!-- -->
+	<entry key="igrp.plsql.url"></entry>
+
+	<!-- -->
+	<entry key="igrp.authentication.govcv.enbaled">false</entry>
+
+	<!-- Decides in new user (novoutilizador) if addsRolesToUser -->
+	<entry key="kriol.addrole.user">false</entry>
+
+	<!-- -->
+	<entry key="igrp.env.isNhaLogin">true</entry>
+	<entry key="igrp.env.nhaLogin.url"></entry>
+
+	<!-- -->
+	<entry key="igrp.pwdRecover">false</entry>
+	
+	<!-- Ldap configuration parameters -->
+	<entry key="java.net.preferIPv4Stack"></entry>
+	<entry key="mail.smtp.host">smtp.gmail.com</entry>
+	<entry key="mail.smtp.socketFactory.port">465</entry>
+	<entry key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</entry>
+	<entry key="mail.smtp.auth">true</entry>
+	<entry key="mail.smtp.port">465</entry>
+	<entry key="mail.ssl.smtp.port">465</entry>
+	<entry key="mail.user">chicoplus.suporte@gmail.com</entry>
+	<entry key="mail.password">a$di$2021</entry>
+	
+	<!-- -->
+	<entry key="ldap.ad.url"></entry>
+	<entry key="ldap.ad.username"></entry>
+	<entry key="ldap.ad.password"></entry>
+	<entry key="ldap.ad.base"></entry>
+	<entry key="ldap.ad.authentication_filter"></entry>
+	<entry key="ldap.ad.entryDN"></entry>
+
+	<!-- links rest pesquisas gerais -->
+	<entry key="link.rest.pesquisa_bi_cni_pass">https://api-stage-pdex.gov.cv:8242/bi/1.0.0/bi_service_op</entry>
+	<entry key="link.rest.pesquisa_nif">https://api-stage-pdex.gov.cv:8242/api_nif/1.0.0/nif</entry>
+	<!--<entry key="link.rest.pesquisa_geografia">https://api-stage-pdex.gov.cv:8242/GeoINGT/1.0.0/select_geo_by_id</entry> -->
+
+	<entry key="link.rest.pesquisa_geografia">https://api-stage-pdex.gov.cv:8242/geografia/1.0.0/select_geo_by_id</entry>
+	<entry key="link.rest.pesquisa_cae">https://api-stage-pdex.gov.cv:8242/pesquisa_cae/1.0.0/pesquisa_cae</entry>
+	<entry key="link.rest.pesquisa_empresa">https://api-stage-pdex.gov.cv:8242/t/igrp.cv/pesquisa_empresa/1.0.0/operation_name_pesqu_empresa</entry>
+	<entry key="link.rest.pesquisa_cni">https://api-stage-pdex.gov.cv:8242/cni/1.0.0/pesquisa_cni</entry>
+	<entry key="link.rest.pesquisa_empresa_registro_comercial">https://api-stage-pdex.gov.cv:8242/t/rni.gov/PesquisaEmpresaSIRC/1.0.0/_postpesq_empresa_sirc</entry>
+
+	<!-- authorization rest pesquisas gerais -->
+	<entry key="authorization.link.rest.pesquisa_bi_cni_pass">Bearer ffed23b6-eee3-392e-a5c6-4856a4720a30</entry>
+	<entry key="authorization.rest.pesquisa_nif">Bearer ffed23b6-eee3-392e-a5c6-4856a4720a30</entry>
+	<entry key="authorization.rest.pesquisa_geografia">Bearer ffed23b6-eee3-392e-a5c6-4856a4720a30</entry>
+	<entry key="authorization.rest.pesquisa_cae">Bearer ffed23b6-eee3-392e-a5c6-4856a4720a30</entry>
+	<entry key="authorization.rest.pesquisa_empresa">Bearer a7080c71-1cf4-31bb-bf43-9f375265582e</entry>
+	<entry key="authorization.link.rest.pesquisa_cni">Bearer 849a3725-9d68-3633-b64b-9cb8ca377d47</entry>
+	<entry key="authorization.link.rest.pesquisa_empresa_registro_comercial">Bearer 5bebdc71-f1bc-3e04-a11c-6740c538230a</entry>
+
+	<!-- Integration SIGOF:nosi.webapps.dgtr.integration -->
+	<entry key="link.rest.integration.sigof.criar_duc">https://api-pdex.gov.cv:8242/t/financas.gov/mfservicesduccreatev3/1.0.3/postProcessBanca</entry>
+	<entry key="link.rest.integration.sigof.estado_duc">https://api-pdex.gov.cv:8242/t/financas.gov/mfservicesduccreatev3/1.0.3/postProcessBancaEstadoDUC</entry>
+	<entry key="link.rest.integration.sigof.anular_duc">https://api-pdex.gov.cv:8242/t/financas.gov/mfservicesduccreatev3/1.0.3/postProcessBancaAnularDUC</entry>
+	<entry key="link.rest.integration.sigof.agregar_duc">https://api-pdex.gov.cv:8242/t/financas.gov/mfservicesagregarducstage2/1.0.2/postAgregarDUC</entry>
+	<entry key="link.rest.integration.sigof.desagregar_duc">https://api-pdex.gov.cv:8242/t/financas.gov/mfservicesagregarducstage2/1.0.2/postDesagregarDUC</entry>
+	<entry key="link.report.integration.sigof.duc">http://reportsta.gov.cv/reports/rwservlet?SIGOF_DUC&amp;p_nu_duc=</entry>
+	<entry key="authorization.rest.integration.sigof">Bearer 160891a0-c761-377a-b922-a39a420929b4</entry>
+	
+	<entry key="link.info_user.autentika">https://autentika.gov.cv/oauth2/userinfo</entry>
+	
+	<!-- KEY FOR ENDPOINTS -->
+	<entry key="service.authorization.key">Bearer 160891a0-c761-377a-b922-a39a420929b4</entry>
+	
+	<entry key="link.rest.pesquisa_geografia_old">https://api-stage-pdex.gov.cv:8242/geografia/1.0.0/select_geo_by_id</entry>
+	<entry key="authorization.rest.pesquisa_geografia_old">Bearer ffed23b6-eee3-392e-a5c6-4856a4720a30</entry>
+	
+	<entry key="link.rest.area_qualific.link">http://192.168.20.125/paef/rest/area_qualif/</entry>
+	<entry key="link.rest.area_qualific.key" >Bearer ba2ef539cbf34dd88d6dd545330b10fa</entry>
+	
+	<entry key="link.rest.info_entidade.link">http://192.168.20.125/paef/rest/info/entidade</entry>
+	<entry key="link.rest.info_entidade.key" >Bearer 160891a0-c761-377a-b922-a39a420929b4</entry>
+	
+	<entry key="link.rest.pesquisa_bi.link_search" >https://gateway-stage-pdex.gov.cv/t/rni.gov/PesquisaBI/1.0.0/bi_service_op</entry>
+	<entry key="link.rest.pesquisa_bi.key_auth" >Bearer eyJ4NXQiOiJOVGczWW1Ka056WmhaRFJpTW1RME1EazNOR00wWldFeU1qQmhNalV3TjJFMU9XRTJNalkzTVRsak1UUmpZV1F6WXpaak1XTXdOV1ZsWXpneU5XRmtPQSIsImtpZCI6Ik5UZzNZbUprTnpaaFpEUmlNbVEwTURrM05HTTBaV0V5TWpCaE1qVXdOMkUxT1dFMk1qWTNNVGxqTVRSallXUXpZelpqTVdNd05XVmxZemd5TldGa09BX1JTMjU2IiwiYWxnIjoiUlMyNTYifQ</entry>
+	
+	<!-- API'S ADONIS -->
+	<entry key="link.rest.link_end_point_bi" >https://gateway-stage-pdex.gov.cv/t/rni.gov/PesquisaBI/1.0.0/bi_service_op</entry>
+    <entry key="authorization.rest.key_end_point_bi" >Bearer eyJ4NXQiOiJOVGczWW1Ka056WmhaRFJpTW1RME1EazNOR00wWldFeU1qQmhNalV3TjJFMU9XRTJNalkzTVRsak1UUmpZV1F6WXpaak1XTXdOV1ZsWXpneU5XRmtPQSIsImtpZCI6Ik5UZzNZbUprTnpaaFpEUmlNbVEwTURrM05HTTBaV0V5TWpCaE1qVXdOMkUxT1dFMk1qWTNNVGxqTVRSallXUXpZelpqTVdNd05XVmxZemd5TldGa09BX1JTMjU2IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJmcGVmLmluZm9AZnBlZi5nb3YuY3YiLCJhdXQiOiJBUFBMSUNBVElPTiIsImF1ZCI6InJPS1BKZkFiVWZxaHZBSk9lMUdzOGd4UVJ2UWEiLCJuYmYiOjE2NTkwMzE1MTIsImF6cCI6InJPS1BKZkFiVWZxaHZBSk9lMUdzOGd4UVJ2UWEiLCJzY29wZSI6ImRlZmF1bHQiLCJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0Ojk0NDNcL29hdXRoMlwvdG9rZW4iLCJleHAiOjkyMjMzNzIwMzY4NTQ3NzUsImlhdCI6MTY1OTAzMTUxMiwianRpIjoiMGFkMjg5M2YtMDY4Yy00NWRlLWJlODUtYTA4ZTMyZjNiZmQyIn0.STte-xTphDWub-k4EDXNdXiHi7GNob71sLc8vML_4hEaU7a6Z1eNHZehHqKDeCpKxjQwB46UJsTlq9WN4JLGLQj5xMybslZ2JztEWcNeDq3dIXie5ICKocx-Jm8o6IDpSukZ1pqjUhdYTJUz315soElNcSZsDHLquldADyIhJZsXIrOxnJjipELnkTAIhBA8oYvnxOMkTmQk3Vnj6rfK8mOSXoXmWv6jcYzM62JURtBuhrQa9PKsZMQTTf_LknMrA1hACRqy5-4mQQPkT3kBNKTsQGI9CPrNYW4aMFpDuyv2gPc4CiD-Jc2xY3NCmoTOEQWGSIPHDJTXt1cxuQUvpA</entry>
+
+    <entry key="link.rest.link_end_point_cni_pass" >https://gateway-stage-pdex.gov.cv/t/sniac.gov/consultadadosbbnumdoc/1.0.0/consulta_dados_biograficos_e_biometricos</entry>
+    <entry key="authorization.rest.key_end_point_cni_pass" >Bearer 1YiLCJhdXQiOiJBUFBMSUNBVElPTiIsImF1ZCI6ImN2TzRESzVBS0dMdmRPVkcxa2lfcVVHcnJ4c2EiLCJuYmYiOjE2NjAxNDcxMzUsImF6cCI6ImN2TzRESzVBS0dMdmRPVkcxa2lfcVVHcnJ4c2EiLCJzY29wZSI6ImRlZmF1bHQiLCJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0Ojk0NDNcL29hdXRoMlwvdG9rZW4iLCJleHAiOjkyMjMzNzIwMzY4NTQ3NzUsImlhdCI6MTY2MDE0NzEzNSwianRpIjoiMjYzMzY4ZjMtZDVhZC00NmMxLWI0MGItZmY5NzhkM2QxNDdjIn0.pNjDZs2v6SzvCVJo5e0FPRLP9Mychmr4cFAedN8Ev26uf3SbwIEaX1fDnsZn6kuox7k6a47c8iNKNoV6HWOuPUp5tumMpVowYqY6iNZ_4Y0Vkp28pCtMc4FHiSXh9hKfC8i9ahrra8yP-xKeJTZatjZQpDOayc1Wjb74sw8qlepHFQ0lccLSckD9-jG4TPGdq4vBdC9lkBMhqs5RVRJhJwC34PSp5S-gn5Reu_bstY3DBqmNp2jgPcj8N59dWNgE_kYC0c9CV5D2AOyysVUJ80AH3WdkRagWXzK2ZeywFB4HW_FYRMu2PiBAlmxvCpSG8qQE3_UVOk_EYnwfIUeOtg</entry>
+
+	<entry key="link.rest.lista_alvara.link">http://192.168.20.125/paef/rest/fundo/alvara</entry>
+    <entry key="link.rest.lista_formacao.link">http://192.168.20.125/paef/rest/fundo/formacao</entry>
+    <entry key="link.rest.lista_alvara.key">Bearer ba2ef539cbf34dd88d6dd545330b10fa</entry>
+    
+    
+    
+    <!-- START - Search CSU - Information (LINK, TOKEN) -->
+    
+    <entry key="link.rest.transation_csu.token">Bearer 7388c4fe-411f-3ccb-8852-102f33c6def4</entry>
+    <entry key="link.rest.transation_csu.key">60da96ff-1089-405b-a7bb-16a61029f527</entry>
+    
+     <!-- Trasation -->
+	<entry key="link.rest.transation_csu.link">https://api-dev-pdex.gov.cv:8242/t/igrpdev.gov/csu/1.0.0/getTransationKey</entry>
+    <entry key="link.rest.transation_csu.code">YamSp%zDGc</entry>
+    <entry key="link.rest.transation_csu.password">u%@MXShwB</entry>
+    
+    <!-- Return -->
+    <entry key="link.rest.return_csu.link">https://api-dev-pdex.gov.cv:8242/t/igrpdev.gov/csu/1.0.0/cSUReturn</entry>
+    
+    <!-- END - Search CSU - Information (LINK, TOKEN) -->
+   
+     
+    
+</properties>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    	
+    <persistence-unit name="paef">
+        		
+        <class>nosi.webapps.medida_ii.dao.fpef.FpefTCandDesembolso</class>
+        		
+        <class>nosi.webapps.medida_ii.dao.fpef.FpefVDesembolso</class>
+        		
+        <class>nosi.webapps.medida_ii.dao.fpef.FpefTCandRepJovem</class>
+        		
+        <class>nosi.webapps.medida_ii.dao.fpef.FpefTCandReporte</class>
+        		
+        <class>nosi.webapps.medida_ii.dao.fpef.FpefVDocumento</class>
+        		
+        <class>nosi.webapps.medida_ii.dao.fpef.User</class>
+        		
+        <class>nosi.webapps.medida_ii.dao.fpef.FpefTConfigEmail</class>
+        		
+        <class>nosi.webapps.medida_ii.dao.fpef.FpefTConcBolsa</class>
+        		
+        <class>nosi.webapps.medida_ii.dao.fpef.FpefTConcNivel</class>
+        <class>nosi.webapps.medida_ii.dao.fpef.FpefVConcurso</class>
+        <class>nosi.webapps.medida_ii.dao.fpef.FpefTFormacaoResultado</class>
+        <class>nosi.webapps.medida_ii.dao.FpefVCandJovemPessoa</class>
+        <class>nosi.webapps.medida_ii.dao.fpef.FpefVCandJovemPessoa</class>
+        <class>nosi.webapps.medida_ii.dao.FpefVBeneficiario</class>
+        <class>nosi.webapps.medida_ii.dao.fpef.FpefVCandReporte</class>
+        <class>nosi.webapps.medida_ii.dao.fpef.FpefVFormacaoesAprov</class>
+        <class>nosi.webapps.medida_ii.dao.fpef.FpefTDesembProc</class>
+        	  
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        	
+    </persistence-unit>
+    
+</persistence>
